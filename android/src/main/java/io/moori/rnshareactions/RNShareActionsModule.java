@@ -39,7 +39,7 @@ public class RNShareActionsModule extends ReactContextBaseJavaModule {
         }
 
         if (options.hasKey("message")) {
-            intent.putExtra(Intent.EXTRA_SUBJECT, options.getString("message"));
+            intent.putExtra(Intent.EXTRA_TEXT, options.getString("message"));
         }
 
         intent.setType("text/plain");

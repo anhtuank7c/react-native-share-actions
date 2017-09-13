@@ -14,10 +14,6 @@ var ShareActions = {
   share: function(options, title) {
     // Wrap result in a Promise, for consistent Android and iOS Promise usage
     return new Promise(function(resolve, reject) {
-      if (!options.url) {
-        reject(new Error("Url attribute is required"));
-      }
-
       ShareUtil.share(options, title)
         .then(function(result) {
           resolve(result);

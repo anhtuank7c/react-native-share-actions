@@ -38,6 +38,10 @@ public class RNShareActionsModule extends ReactContextBaseJavaModule {
             intent.putExtra(Intent.EXTRA_SUBJECT, options.getString("subject"));
         }
 
+        if (options.hasKey("message")) {
+            intent.putExtra(Intent.EXTRA_SUBJECT, options.getString("message"));
+        }
+
         intent.setType("text/plain");
 
         Intent chooser = Intent.createChooser(intent, title);
